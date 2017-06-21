@@ -22,7 +22,7 @@ __all__ = [
     'Asset',
     'Binary',
     'Camera',
-    'Client',
+    'Client', 'AsyncClient',
     'Event',
     'Message',
     'Object',

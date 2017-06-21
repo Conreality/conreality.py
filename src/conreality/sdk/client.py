@@ -1,15 +1,26 @@
 # This is free and unencumbered software released into the public domain.
 
-class Client:
-    """The client connection."""
+import asyncio
+
+class AsyncClient:
+    """An asynchronous client connection."""
 
     def __init__(self):
         pass
 
-    def __repr__(self):
-        """Returns a human-readable string representation of this object."""
-        return "client{{}}" # TODO
+    async def answer(self):
+        await asyncio.sleep(3)
+        return 42
 
-    def __str__(self):
-        """Returns a human-readable string representation of this object."""
-        return self.__repr__()
+class Client(AsyncClient):
+    """A synchronous client connection."""
+
+    def __init__(self):
+        super().__init__()
+        self.loop = asyncio.get_event_loop()
+
+    def wait(self, future):
+        return self.loop.run_until_complete(future)
+
+    def answer(self):
+        return self.wait(super().answer())
