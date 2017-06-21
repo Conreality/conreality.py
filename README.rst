@@ -6,6 +6,10 @@ Conreality Software Development Kit (SDK) for Python
    :alt: Project license
    :target: https://unlicense.org/
 
+.. image:: https://img.shields.io/pypi/v/conreality.svg
+   :alt: PyPI package
+   :target: https://pypi.python.org/pypi/conreality
+
 .. image:: https://img.shields.io/travis/conreality/conreality.py/master.svg
    :alt: Travis CI build status
    :target: https://travis-ci.org/conreality/conreality.py
