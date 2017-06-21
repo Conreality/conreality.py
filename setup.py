@@ -20,7 +20,7 @@ LONG_DESCRIPTION = readfile(PWD, 'README.rst')
 setup(
   name='conreality',
   version=VERSION,
-  description="Conreality SDK for Python",
+  description="Conreality Software Development Kit (SDK) for Python",
   long_description=LONG_DESCRIPTION,
   url='https://sdk.conreality.org/python/',
   author='Conreality.org',
