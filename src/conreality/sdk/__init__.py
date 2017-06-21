@@ -5,7 +5,7 @@
 import sys
 
 assert sys.version_info >= (3,5), \
-  "Conreality SDK for Python requires Python 3.5+"
+    "Conreality SDK for Python requires Python 3.5+"
 
 from .asset   import *
 from .binary  import *
@@ -19,14 +19,14 @@ from .session import *
 from .theater import *
 
 __all__ = [
-  'Asset',
-  'Binary',
-  'Camera',
-  'Client',
-  'Event',
-  'Message',
-  'Object',
-  'Player',
-  'Session',
-  'Theater',
+    'Asset',
+    'Binary',
+    'Camera',
+    'Client',
+    'Event',
+    'Message',
+    'Object',
+    'Player',
+    'Session',
+    'Theater',
 ]
