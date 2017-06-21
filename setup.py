@@ -22,7 +22,7 @@ setup(
   version=VERSION,
   description="Conreality SDK for Python",
   long_description=LONG_DESCRIPTION,
-  url='https://conreality.org/',
+  url='https://sdk.conreality.org/python/',
   author='Conreality.org',
   author_email='conreality@googlegroups.com',
   license='Public Domain',
@@ -45,7 +45,7 @@ setup(
     'Topic :: Software Development :: Embedded Systems',
     'Topic :: System :: Hardware :: Hardware Drivers',
   ],
-  keywords='conreality driver robotics',
+  keywords='conreality sdk driver robotics',
   packages=['conreality', 'conreality.sdk'],
   install_requires=[
     'asyncpg>=0.11',
