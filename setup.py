@@ -52,4 +52,7 @@ setup(
     'lupa>=1.4',
     'numpy>=1.13',
   ],
+  extras_require={
+    'test': ['pytest'],
+  },
 )
