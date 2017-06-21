@@ -14,9 +14,6 @@ def readfile(*filepath):
 
 PWD = path.abspath(path.dirname(__file__))
 
-copyfile(path.join(PWD, '..', '..', 'VERSION'), path.join(PWD, 'VERSION'))
-copyfile(path.join(PWD, '..', '..', 'UNLICENSE'), path.join(PWD, 'UNLICENSE'))
-
 VERSION          = readfile(PWD, 'VERSION').rstrip()
 LONG_DESCRIPTION = readfile(PWD, 'README.rst')
 
