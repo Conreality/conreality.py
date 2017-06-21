@@ -8,4 +8,6 @@ addons:
   apt:
     packages:
       - liblua5.2-dev
+env:
+  - PYTHONPATH=src
 script: pytest
