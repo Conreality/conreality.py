@@ -1,0 +1,13 @@
+# https://docs.travis-ci.com/user/languages/python/
+language: python
+sudo: false
+python:
+  - 3.6
+  - 3.5
+  - 3.4
+  - pypy3
+matrix:
+  fast_finish: true
+  allow_failures:
+    - go: pypy3
+script: pytest
