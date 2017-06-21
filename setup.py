@@ -5,7 +5,7 @@
 
 from codecs import open
 from os import path
-from setuptools import setup
+from setuptools import setup, find_packages
 from shutil import copyfile
 
 def readfile(*filepath):
@@ -45,7 +45,8 @@ setup(
     'Topic :: System :: Hardware :: Hardware Drivers',
   ],
   keywords='conreality sdk driver robotics',
-  packages=['conreality', 'conreality.sdk'],
+  packages=find_packages(where='src'),
+  package_dir={'': 'src'},
   install_requires=[
     'asyncpg>=0.11',
     'lupa>=1.4',
