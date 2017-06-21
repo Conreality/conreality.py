@@ -15,7 +15,7 @@ def readfile(*filepath):
 PWD = path.abspath(path.dirname(__file__))
 
 VERSION          = readfile(PWD, 'VERSION').rstrip()
-LONG_DESCRIPTION = readfile(PWD, 'README.rst')
+LONG_DESCRIPTION = readfile(PWD, 'README')
 
 setup(
   name='conreality',
