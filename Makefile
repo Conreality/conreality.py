@@ -1,12 +1,11 @@
 PYTHON = python3
 PYTEST = pytest
 
-PACKAGE = conreality
-VERSION = `cat VERSION`
+PACKAGE := conreality
+VERSION := $(shell cat VERSION)
 
 SOURCES := $(wildcard src/*/*.py src/*/*/*.py)
-
-BINARIES =
+OUTPUTS :=
 
 dist/$(PACKAGE)-$(VERSION).tar.gz: setup.py $(SOURCES)
 	$(PYTHON) setup.py sdist
