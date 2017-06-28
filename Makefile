@@ -4,7 +4,7 @@ PYTEST = pytest
 PACKAGE = conreality
 VERSION = `cat VERSION`
 
-SOURCES =
+SOURCES := $(wildcard src/*/*.py src/*/*/*.py)
 
 BINARIES =
 
