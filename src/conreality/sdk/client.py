@@ -1,7 +1,6 @@
 # This is free and unencumbered software released into the public domain.
 
 import asyncio
-import asyncpg
 
 class AsyncClient:
     """An asynchronous client connection."""
@@ -10,7 +9,6 @@ class AsyncClient:
         self.conn = None
 
     async def connect(self, **kwargs):
-        self.conn = await asyncpg.connect(**kwargs)
         return self.conn
 
     async def disconnect(self):

@@ -50,8 +50,6 @@ setup(
   packages=find_packages(where='src'),
   package_dir={'': 'src'},
   install_requires=[
-    'asyncpg>=0.11',
-    'lupa>=1.4',
     'numpy>=1.13',
   ],
   python_requires='~=3.7',
