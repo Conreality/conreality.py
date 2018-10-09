@@ -15,7 +15,6 @@ from .event   import *
 from .message import *
 from .object  import *
 from .player  import *
-from .scope   import *
 from .session import *
 from .theater import *
 
@@ -28,7 +27,6 @@ __all__ = [
     'Message',
     'Object',
     'Player',
-    'Scope',
     'Session',
     'Theater',
 ]
