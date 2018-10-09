@@ -1,34 +1,48 @@
-PYTHON = python3
-PYTEST = pytest
-
 PACKAGE := conreality
 VERSION := $(shell cat VERSION)
 
+PANDOC  ?= pandoc
+PYTHON  ?= python3
+PYTEST  ?= pytest
+TWINE   ?= twine
+
 SOURCES := $(wildcard src/*/*.py src/*/*/*.py)
-OUTPUTS :=
 
-dist/$(PACKAGE)-$(VERSION).tar.gz: setup.py $(SOURCES)
-	$(PYTHON) setup.py sdist
+%.html: %.rst
+	$(PANDOC) -o $@ -t html5 -s $<
 
-all: build
+all: dist
+
+dist/$(PACKAGE)-$(VERSION).tar.gz: setup.py MANIFEST.in $(SOURCES)
+	$(PYTHON) setup.py sdist --formats=gztar
+
+dist/$(PACKAGE)-$(VERSION).tar.xz: setup.py MANIFEST.in $(SOURCES)
+	$(PYTHON) setup.py sdist --formats=xztar
+
+dist/$(PACKAGE)-$(VERSION)-py3-none-any.whl: setup.py $(SOURCES)
+	$(PYTHON) setup.py bdist_wheel
 
 build: setup.py $(SOURCES)
 	$(PYTHON) setup.py build
 
-check: $(SOURCES) test/test_package.py
+check: $(SOURCES) $(wildcard test/test*.py)
 	PYTHONPATH=src $(PYTEST)
 
-dist: dist/$(PACKAGE)-$(VERSION).tar.gz
+dist:  sdist bdist
+sdist: dist/$(PACKAGE)-$(VERSION).tar.gz
+bdist: dist/$(PACKAGE)-$(VERSION)-py3-none-any.whl
 
 install: setup.py $(SOURCES)
 	$(PYTHON) setup.py build
 
 clean: setup.py
-	@rm -Rf *~ dist/*
+	@rm -Rf *~ build dist
 	$(PYTHON) setup.py clean
 
 distclean: clean
 
 mostlyclean: clean
 
-.PHONY: build check install clean distclean mostlyclean
+.PHONY: build check dist sdist bdist install clean distclean mostlyclean
+.SECONDARY:
+.SUFFIXES:

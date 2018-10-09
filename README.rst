@@ -4,7 +4,7 @@ Conreality Software Development Kit (SDK) for Python
 
 .. image:: https://img.shields.io/badge/license-Public%20Domain-blue.svg
    :alt: Project license
-   :target: https://unlicense.org/
+   :target: https://unlicense.org
 
 .. image:: https://img.shields.io/pypi/v/conreality.svg
    :alt: PyPI package

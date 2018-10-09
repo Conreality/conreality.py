@@ -15,13 +15,14 @@ def readfile(*filepath):
 PWD = path.abspath(path.dirname(__file__))
 
 VERSION          = readfile(PWD, 'VERSION').rstrip()
-LONG_DESCRIPTION = readfile(PWD, 'README')
+LONG_DESCRIPTION = readfile(PWD, 'README.rst')
 
 setup(
   name='conreality',
   version=VERSION,
   description="Conreality Software Development Kit (SDK) for Python",
   long_description=LONG_DESCRIPTION,
+  long_description_content_type='text/x-rst',
   url='https://sdk.conreality.org/python/',
   author='Conreality.org',
   author_email='conreality@googlegroups.com',
@@ -45,6 +46,7 @@ setup(
     'Topic :: System :: Hardware :: Hardware Drivers',
   ],
   keywords='conreality sdk driver robotics',
+  project_urls={},
   packages=find_packages(where='src'),
   package_dir={'': 'src'},
   install_requires=[
@@ -52,6 +54,7 @@ setup(
     'lupa>=1.4',
     'numpy>=1.13',
   ],
+  python_requires='~=3.7',
   extras_require={
     'test': ['pytest'],
   },
