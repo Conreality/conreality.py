@@ -45,7 +45,9 @@ setup(
     'Topic :: System :: Hardware :: Hardware Drivers',
   ],
   keywords='conreality sdk driver robotics',
-  project_urls={},
+  project_urls={
+    'Source': 'https://github.com/conreality/conreality.py',
+  },
   packages=find_packages(where='src'),
   package_dir={'': 'src'},
   install_requires=[
