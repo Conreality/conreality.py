@@ -7,6 +7,8 @@ import sys
 assert sys.version_info >= (3,7), \
     "Conreality SDK for Python requires Python 3.7+"
 
+import drylib
+
 from .asset   import *
 from .binary  import *
 from .camera  import *
