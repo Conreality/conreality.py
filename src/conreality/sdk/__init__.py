@@ -4,8 +4,8 @@
 
 import sys
 
-assert sys.version_info >= (3,5), \
-    "Conreality SDK for Python requires Python 3.5+"
+assert sys.version_info >= (3,7), \
+    "Conreality SDK for Python requires Python 3.7+"
 
 from .asset   import *
 from .binary  import *
