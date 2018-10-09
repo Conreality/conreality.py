@@ -1,6 +1,7 @@
 # This is free and unencumbered software released into the public domain.
 
 import asyncio
+import grpc
 
 class AsyncClient:
     """An asynchronous client connection."""

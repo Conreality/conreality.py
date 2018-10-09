@@ -51,6 +51,7 @@ setup(
   package_dir={'': 'src'},
   install_requires=[
     'drylib',
+    'grpcio>=1.15',
     'numpy>=1.15',
   ],
   python_requires='~=3.7',
