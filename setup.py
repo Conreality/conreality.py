@@ -51,7 +51,7 @@ setup(
   package_dir={'': 'src'},
   install_requires=[
     'drylib',
-    'numpy>=1.13',
+    'numpy>=1.15',
   ],
   python_requires='~=3.7',
   extras_require={

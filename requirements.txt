@@ -1,2 +1,2 @@
 drylib
-numpy>=1.13
+numpy>=1.15
